@@ -1,4 +1,4 @@
-#BANKING CLI (Console App)
+# BANKING CLI (Console App)
 Tecnología: Java puro + Head First Java
  Objetivo: Dominar sintaxis, OOP, colecciones, BigDecimal, archivos.
 
