@@ -8,8 +8,8 @@ Tecnología: Java puro + Head First Java
  Crea una aplicación de consola que simule un banco básico.
  REQUERIMIENTOS:
  1. Clases:
-   - Cuenta (DNI, nombre, saldo: BigDecimal, lista de transacciones)
-   - Transaccion (tipo: DEPÓSITO/RETIRO/TRANSFERENCIA, monto, fecha, cuenta origen/destino)
+   - model.Cuenta (DNI, nombre, saldo: BigDecimal, lista de transacciones)
+   - model.Transaccion (tipo: DEPÓSITO/RETIRO/TRANSFERENCIA, monto, fecha, cuenta origen/destino)
    - Banco (gestiona todas las cuentas)
  2. Funcionalidades (menú):
    [1] Crear cuenta
@@ -21,7 +21,7 @@ Tecnología: Java puro + Head First Java
  3. Reglas de negocio:
    - Saldo no puede ser negativo
    - Transferencia: validar saldo suficiente
-   - DNI único (usa HashMap<String, Cuenta>)
+   - DNI único (usa HashMap<String, model.Cuenta>)
  4. Persistencia:
    - Al salir: guardar cuentas en archivo `cuentas.txt` (formato: DNI|nombre|saldo)
    - Al iniciar: cargar desde archivo
