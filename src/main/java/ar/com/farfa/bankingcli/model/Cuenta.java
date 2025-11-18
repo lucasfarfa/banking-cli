@@ -7,8 +7,8 @@ public class Cuenta {
     private int _dni;
     private String _nombre;
     private int pin;
-    BigDecimal _saldo;
-    ArrayList<Transaccion> trasacciones;
+    private BigDecimal _saldo;
+    private ArrayList<Transaccion> trasacciones;
 
     public Cuenta(int dni, String nombre, int pin)
     {

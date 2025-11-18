@@ -12,7 +12,15 @@ public class BankingMenu
         bankingService = new BankingService();
     }
 
-    public void showMenu()
+    public void Ejecutar()
+    {
+        // TODO verificar que el cargar lo puedo hacer desde el constructor de bankingService :)
+        bankingService.cargarCuentasDesdeArchivo();     // levanto todos los registros del archivo
+        showMenu();                                     // trabajo en memoria (estructuras de datos)
+        bankingService.guardarCuentasEnArchivo();       // guardo en archivo
+    }
+
+    private void showMenu()
     {
         String option;
         do
@@ -41,7 +49,7 @@ public class BankingMenu
             }
         } while (!option.equals("6"));
     }
-    //TODO
+
     private void crearCuenta() {
         int dni;
         do {
@@ -58,13 +66,16 @@ public class BankingMenu
         bankingService.crearCuenta(dni, nombre, pin);
         ui.showSuccessMessage("Cuenta creada con exito");
     }
+
     private void depositar() {
     }
+
     private void retirar() {
     }
+
     private void trasnferirEntreCuentas() {
     }
-    private void verSaldo() {
 
+    private void verSaldo() {
     }
 }
