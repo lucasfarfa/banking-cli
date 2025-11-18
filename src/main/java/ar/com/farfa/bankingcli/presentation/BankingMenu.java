@@ -15,7 +15,6 @@ public class BankingMenu
     public void Ejecutar()
     {
         // TODO verificar que el cargar lo puedo hacer desde el constructor de bankingService :)
-        bankingService.cargarCuentasDesdeArchivo();     // levanto todos los registros del archivo
         showMenu();                                     // trabajo en memoria (estructuras de datos)
         bankingService.guardarCuentasEnArchivo();       // guardo en archivo
     }

@@ -8,14 +8,15 @@ public class Cuenta {
     private String _nombre;
     private int pin;
     private BigDecimal _saldo;
-    private ArrayList<Transaccion> trasacciones;
+    private ArrayList<Transaccion> transacciones;
 
     public Cuenta(int dni, String nombre, int pin)
     {
         this._dni= dni;
         this._nombre = nombre;
         this.pin = pin;
-        this._saldo= new BigDecimal("0.00");
+        this._saldo= BigDecimal.ZERO;
+        this.transacciones= new ArrayList<Transaccion>();
     }
 
     // La idea es que solamente se pueda un unico DNI asociado a una cuenta.
@@ -33,5 +34,13 @@ public class Cuenta {
     public int hashCode() {
         return Integer.hashCode(_dni);
     }
+
+    // Logica de Negocio
+    /*
+    depositar
+    retirar
+    transferenciaEnviada
+    transferenciaRecibida
+     */
 
 }
