@@ -4,32 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5315882-6fe8-4663-ba80-6cec9b220c35" name="Changes" comment="" />
+    <list default="true" id="a9f2a235-58a9-4f75-9352-db79b6d316b1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/model/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/model/Cuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/persistence/FileCuentaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/persistence/FileCuentaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/BankingMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/BankingMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/ConsoleUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/service/BankingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/service/BankingService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
-  <component name="ProjectId" id="35c0OO2I3JqJFDBdklKg7kvqq11" />
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="35c5nyCqRemiVubOFIwUOcxCH2G" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.App.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "clases",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -37,7 +50,6 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/lucas/Desktop/banking-cli/src/main/java/org/example/Main.java",
     "settings.editor.selected.configurable": "configurable.group.language",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
@@ -53,12 +65,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c5315882-6fe8-4663-ba80-6cec9b220c35" name="Changes" comment="" />
-      <created>1763394023493</created>
+      <changelist id="a9f2a235-58a9-4f75-9352-db79b6d316b1" name="Changes" comment="" />
+      <created>1763396691079</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1763394023493</updated>
-      <workItem from="1763394024732" duration="1693000" />
+      <updated>1763396691079</updated>
+      <workItem from="1763396692533" duration="324000" />
+      <workItem from="1763422995498" duration="2647000" />
     </task>
     <servers />
   </component>
