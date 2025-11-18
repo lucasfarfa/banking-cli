@@ -19,7 +19,7 @@ public class BankingMenu
         {
             option = ui.askNotNullString( // esto es una "Text Box"
                     """
-                            [1] Crear model.Cuenta
+                            [1] Crear Cuenta
                             [2] Depositar
                             [3] Retirar
                             [4] Trasnferir entre cuentas
@@ -34,11 +34,37 @@ public class BankingMenu
                 case "4" -> trasnferirEntreCuentas();
                 case "5" -> verSaldo();
                 case "6" -> {
-                    ui.showSuccessMessage("Saliendo del sistema)");
+                    ui.showSuccessMessage("Saliendo del sistema");
                     ui.closeScanner();
                 }
                 default ->  ui.showErrorMessage("Not in range [1-6]");
             }
         } while (!option.equals("6"));
+    }
+    //TODO
+    private void crearCuenta() {
+        int dni;
+        do {
+            dni = ui.askForDNI("Ingrese DNI: "); // valdia el formato
+            if (bankingService.existeDNI(dni))
+            {
+                ui.showErrorMessage("El DNI" + dni + " ya esta registrado.");
+            }
+        } while (bankingService.existeDNI(dni));
+
+        String nombre = ui.askNotNullString("Ingrese nombre completo: ");
+        int pin = ui.askFourDigitsPIN("Ingrese PIN: ");
+
+        bankingService.crearCuenta(dni, nombre, pin);
+        ui.showSuccessMessage("Cuenta creada con exito");
+    }
+    private void depositar() {
+    }
+    private void retirar() {
+    }
+    private void trasnferirEntreCuentas() {
+    }
+    private void verSaldo() {
+
     }
 }
