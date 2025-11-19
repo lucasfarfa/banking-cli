@@ -1,5 +1,6 @@
 package ar.com.farfa.bankingcli.presentation;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class ConsoleUI {
@@ -59,17 +60,34 @@ public class ConsoleUI {
             System.out.print(message);
 
             if (!scanner.hasNextInt()) {
-                showErrorMessage("Error! Invalid PIN number");
+                showErrorMessage("Invalid PIN number");
             } else  {
                 pin = scanner.nextInt();
                 if(pin < 1000 || pin > 9999)
                 {
-                    showErrorMessage("Error! Invalid PIN number");
+                    showErrorMessage("Invalid PIN number");
                     pin = 0;
                 }
             }
         }   while (pin == 0);
         return pin;
+    }
+
+    public BigDecimal pedirMonto(String message) {
+        BigDecimal monto = BigDecimal.ZERO;
+        do {
+            System.out.print(message);
+
+            if(!scanner.hasNextBigDecimal()) {
+                showErrorMessage("Invalid number");
+            } else {
+                monto = scanner.nextBigDecimal();
+                if (monto.compareTo(BigDecimal.ZERO) != 1) { // si es menor o igual a 0
+                    showErrorMessage("Invalid range");
+                }
+            }
+        } while (monto.compareTo(BigDecimal.ZERO) != 1);
+        return monto;
     }
 }
 

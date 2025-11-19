@@ -1,21 +1,26 @@
 package ar.com.farfa.bankingcli.model;
+import ar.com.farfa.bankingcli.model.Transaccion.*;
+
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.StringJoiner;
 
 public class Cuenta {
 
-    private int _dni;
-    private String _nombre;
-    private int pin;
-    BigDecimal _saldo;
-    ArrayList<Transaccion> trasacciones;
+    private final int dni;
+    private final String nombre;
+    private final int pin;
+    private BigDecimal saldo;
+    private ArrayList<Transaccion> transacciones;
 
     public Cuenta(int dni, String nombre, int pin)
     {
-        this._dni= dni;
-        this._nombre = nombre;
+        this.dni = dni;
+        this.nombre = nombre;
         this.pin = pin;
-        this._saldo= new BigDecimal("0.00");
+        this.saldo = BigDecimal.ZERO;
+        this.transacciones= new ArrayList<Transaccion>();
     }
 
     // La idea es que solamente se pueda un unico DNI asociado a una cuenta.
@@ -24,14 +29,43 @@ public class Cuenta {
         boolean retorno = false;
         if (obj != null && obj.getClass() == this.getClass()) {
             Cuenta compare = (Cuenta) obj;
-            retorno = this._dni == compare._dni;
+            retorno = this.dni == compare.dni;
         }
         return retorno;
     }
 
     @Override
     public int hashCode() {
-        return Integer.hashCode(_dni);
+        return Integer.hashCode(dni);
     }
+
+
+    /*@Override
+    public String toString() {
+    }*/
+
+    // Logica de Negocio
+
+    public void depositar (BigDecimal monto)
+    {
+        saldo = saldo.add(monto);
+        transacciones.add(new Transaccion(TipoTransaccion.DEPOSITO, monto, LocalDateTime.now(), null));
+    }
+    public void retirar (BigDecimal monto)
+    {
+        saldo = saldo.subtract(monto);
+        transacciones.add(new Transaccion(TipoTransaccion.RETIRO, monto, LocalDateTime.now(), null));
+    }
+
+    public void transferirEnviada(BigDecimal monto, String dniDestino) {
+        saldo = saldo.subtract(monto);
+        transacciones.add(new Transaccion(TipoTransaccion.TRANSFERENCIA_ENVIADA, monto, LocalDateTime.now(), dniDestino));
+    }
+
+    public void transferirRecibida(BigDecimal monto, String dniOrigen) {
+        saldo = saldo.add(monto);
+        transacciones.add(new Transaccion(TipoTransaccion.TRANSFERENCIA_RECIBIDA, monto, LocalDateTime.now(), dniOrigen));
+    }
+
 
 }
