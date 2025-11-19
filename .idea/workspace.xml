@@ -7,7 +7,10 @@
     <list default="true" id="a9f2a235-58a9-4f75-9352-db79b6d316b1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/model/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/model/Cuenta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/persistence/FileCuentaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/persistence/FileCuentaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/model/Transaccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/model/Transaccion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/BankingMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/BankingMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/ConsoleUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/service/BankingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/service/BankingService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +72,8 @@
       <workItem from="1763396692533" duration="324000" />
       <workItem from="1763422995498" duration="2737000" />
       <workItem from="1763426845417" duration="1302000" />
-      <workItem from="1763501354582" duration="5767000" />
+      <workItem from="1763501354582" duration="5787000" />
+      <workItem from="1763582184955" duration="2260000" />
     </task>
     <servers />
   </component>

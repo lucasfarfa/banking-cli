@@ -39,39 +39,10 @@ public class Cuenta {
         return Integer.hashCode(dni);
     }
 
-    @Override
+
+    /*@Override
     public String toString() {
-        StringJoiner sj = new StringJoiner("|");
-        for (Transaccion t : transacciones) {
-            String linea = t.tipo() + ":" + t.monto() + ":" + t.fecha();
-            if (t.dniDestino() != null) linea += ":" + t.dniDestino();
-            sj.add(linea);
-        }
-        return dni + "|" + nombre + "|" + saldo + "|" + pin + "|" + sj;
-    }
-
-    public static Cuenta fromString(String linea) {
-        String[] partes = linea.split("\\|", 5);
-        int dni = Integer.parseInt(partes[0]);
-        String nombre = partes[1];
-        BigDecimal saldo = new BigDecimal(partes[2]);
-        int pin = Integer.parseInt(partes[3]);
-
-        Cuenta cuenta = new Cuenta(dni, nombre, pin);
-        cuenta.saldo = saldo;
-
-        if (partes.length > 4 && !partes[4].isBlank()) {
-            for (String t : partes[4].split("\\|")) {
-                String[] campos = t.split(":");
-                TipoTransaccion tipo = TipoTransaccion.valueOf(campos[0]);
-                BigDecimal monto = new BigDecimal(campos[1]);
-                LocalDateTime fecha = LocalDateTime.parse(campos[2]);
-                String dniDestino = campos.length > 3 ? campos[3] : null;
-                cuenta.transacciones.add(new Transaccion(tipo, monto, fecha, dniDestino));
-            }
-        }
-        return cuenta;
-    }
+    }*/
 
     // Logica de Negocio
 

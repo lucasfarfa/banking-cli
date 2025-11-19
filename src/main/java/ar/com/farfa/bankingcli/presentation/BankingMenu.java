@@ -1,6 +1,8 @@
 package ar.com.farfa.bankingcli.presentation;
 import ar.com.farfa.bankingcli.service.BankingService;
 
+import java.math.BigDecimal;
+
 public class BankingMenu
 {
     private final ConsoleUI ui;
@@ -14,8 +16,7 @@ public class BankingMenu
 
     public void Ejecutar()
     {
-        // TODO verificar que el cargar lo puedo hacer desde el constructor de bankingService :)
-        showMenu();                                     // trabajo en memoria (estructuras de datos)
+        showMenu();
         bankingService.guardarCuentasEnArchivo();       // guardo en archivo
     }
 
@@ -49,10 +50,13 @@ public class BankingMenu
         } while (!option.equals("6"));
     }
 
+    // Estos metodos piden datos al usuario e interactuan con bankingservice para realizar las acciones del menu
+    // la logica de negocio sigue en servicio
+
     private void crearCuenta() {
         int dni;
         do {
-            dni = ui.askForDNI("Ingrese DNI: "); // valdia el formato
+            dni = ui.askForDNI("Ingrese DNI: "); // valida el formato
             if (bankingService.existeDNI(dni))
             {
                 ui.showErrorMessage("El DNI" + dni + " ya esta registrado.");
@@ -67,14 +71,59 @@ public class BankingMenu
     }
 
     private void depositar() {
+        int dni = obtenerDNI();
+        BigDecimal monto = ui.pedirMonto("Ingrese monto: ");
+        bankingService.depositar(dni, monto);
+        ui.showSuccessMessage("Deposito de $" + monto + " realizado.");
     }
 
     private void retirar() {
+        int dni = obtenerDNI();
+        BigDecimal monto = ui.pedirMonto("Ingrese monto: ");
+
+        if(!bankingService.validarSaldo(dni, monto))
+        {
+            ui.showErrorMessage("Saldo insuficiente");
+        }
+        else {
+            bankingService.retirar(dni, monto);
+            ui.showSuccessMessage("Deposito de $" + monto + " realizado.");
+        }
+
+
     }
 
     private void trasnferirEntreCuentas() {
+        int dniOrigen = obtenerDNI();
+        int dniDestino = obtenerDNI();
+        BigDecimal monto = ui.pedirMonto("Ingrese monto: ");
+
+        if(!bankingService.validarSaldo(dniOrigen, monto))
+        {
+            ui.showErrorMessage("Saldo insuficiente en cuenta Origen");
+        }
+        else {
+            bankingService.transferirEntreCuentas(dniOrigen, dniDestino, monto);
+            ui.showSuccessMessage("Deposito de $" + monto + " realizado.");
+        }
     }
 
     private void verSaldo() {
+        int dni = obtenerDNI();
+        bankingService.mostrarSaldoTransacciones(dni);
     }
+
+    private int obtenerDNI() {
+        int dni;
+        do {
+            dni = ui.askForDNI("Ingrese DNI: "); // valida el formato
+            if (!bankingService.existeDNI(dni))
+            {
+                ui.showErrorMessage("El DNI" + dni + "no existe.");
+            }
+        } while (!bankingService.existeDNI(dni));
+        return dni;
+    }
+
+
 }

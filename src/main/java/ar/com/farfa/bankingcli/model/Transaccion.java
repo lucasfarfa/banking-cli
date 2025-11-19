@@ -15,6 +15,6 @@ public record Transaccion (
         RETIRO,
         TRANSFERENCIA_ENVIADA,
         TRANSFERENCIA_RECIBIDA
-    } // el enum es muy utuli para definir Dias, Monedas, Estados, Roles, etc
+    } // el enum es muy util para definir Dias, Monedas, Estados, Roles, etc
 }
 
