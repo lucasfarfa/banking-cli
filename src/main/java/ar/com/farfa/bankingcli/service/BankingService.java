@@ -13,11 +13,12 @@ public class BankingService
     public BankingService()
     {
         this.repositorio = new FileCuentaRepository();
-        cuentas = repositorio.cargarCuentasDesdeArchivo();
+       // cuentas = repositorio.cargarCuentasDesdeArchivo();
     }
 
     public boolean existeDNI(int dni) {
         return cuentas.containsKey(dni);
+        // TODO: agregar excepciones
     }
 
     // TODO

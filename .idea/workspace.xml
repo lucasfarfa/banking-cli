@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a9f2a235-58a9-4f75-9352-db79b6d316b1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/model/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/model/Cuenta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/model/Transaccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/model/Transaccion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/BankingMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/BankingMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/ConsoleUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/service/BankingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/service/BankingService.java" afterDir="false" />
     </list>
@@ -73,11 +70,22 @@
       <workItem from="1763422995498" duration="2737000" />
       <workItem from="1763426845417" duration="1302000" />
       <workItem from="1763501354582" duration="5787000" />
-      <workItem from="1763582184955" duration="2260000" />
+      <workItem from="1763582184955" duration="3455000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/ConsoleUI.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

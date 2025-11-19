@@ -25,20 +25,31 @@ public class ConsoleUI {
 
     public int askForDNI(String message) {
         int dni = 0;
+        final int MIN_DNI = 5000000;
+        final int MAX_DNI = 99999999;
+
+        String entrada;
+        boolean inputValido = false;
         do {
             System.out.print(message);
+            entrada = scanner.nextLine();
 
-            if (!scanner.hasNextInt()) {
-                showErrorMessage("Error! Invalid DNI number");
-            } else  {
-                dni = scanner.nextInt();
-                if(dni < 5000000 || dni > 9999999)
+            try {
+                dni = Integer.parseInt(entrada); //intento convertir a integer
+
+                if(dni < MIN_DNI || dni > MAX_DNI) // si tiene exito valido rango
                 {
-                    showErrorMessage("Error! Invalid DNI number");
-                    dni = 0;
+                    showErrorMessage("DNI Out of range");
                 }
+                else
+                {
+                    inputValido = true;
+                }
+                // si fallo la conversion
+            } catch (NumberFormatException e) {
+                showErrorMessage("Formato invalido");
             }
-        }   while (dni == 0);
+        }   while (!inputValido);
         return dni;
     }
 
@@ -56,37 +67,60 @@ public class ConsoleUI {
 
     public int askFourDigitsPIN(String message) {
         int pin = 0;
+        final int MIN_PIN = 1000;
+        final int MAX_PIN = 9999;
+        String entrada;
+        boolean inputValido = false;
+
         do {
             System.out.print(message);
+            entrada = scanner.nextLine();
 
-            if (!scanner.hasNextInt()) {
-                showErrorMessage("Invalid PIN number");
-            } else  {
-                pin = scanner.nextInt();
-                if(pin < 1000 || pin > 9999)
+            try {
+                pin = Integer.parseInt(entrada); //intento convertir a integer
+
+                if(pin < MIN_PIN || pin > MAX_PIN) // si tiene exito valido rango
                 {
-                    showErrorMessage("Invalid PIN number");
-                    pin = 0;
+                    showErrorMessage("PIN Out of range");
                 }
+                else
+                {
+                    inputValido = true;
+                }
+                // si fallo la conversion:
+            } catch (NumberFormatException e) {
+                showErrorMessage("Formato invalido");
             }
-        }   while (pin == 0);
+        }   while (!inputValido);
         return pin;
     }
 
     public BigDecimal pedirMonto(String message) {
         BigDecimal monto = BigDecimal.ZERO;
+        String entrada;
+        boolean inputValido = false;
+
         do {
             System.out.print(message);
+            entrada = scanner.nextLine();
 
-            if(!scanner.hasNextBigDecimal()) {
-                showErrorMessage("Invalid number");
-            } else {
-                monto = scanner.nextBigDecimal();
+            try {
+                monto = new BigDecimal(entrada);
+
                 if (monto.compareTo(BigDecimal.ZERO) != 1) { // si es menor o igual a 0
-                    showErrorMessage("Invalid range");
+                    showErrorMessage("Invalid range, must be a positive number");
                 }
+                else
+                {
+                    inputValido = true;
+                }
+                // si falla conversion:
+            } catch (NumberFormatException e)
+            {
+                showErrorMessage("Invalid number");
             }
-        } while (monto.compareTo(BigDecimal.ZERO) != 1);
+
+        } while (!inputValido);
         return monto;
     }
 }
