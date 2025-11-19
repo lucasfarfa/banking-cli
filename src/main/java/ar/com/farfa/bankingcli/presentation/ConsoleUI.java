@@ -87,7 +87,7 @@ public class ConsoleUI {
                 {
                     inputValido = true;
                 }
-                // si fallo la conversion:
+                // si fallo la conversion manejo except!
             } catch (NumberFormatException e) {
                 showErrorMessage("Formato invalido");
             }
