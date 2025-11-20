@@ -111,7 +111,7 @@ public class BankingMenu
 
     private void verSaldo() {
         int dni = obtenerDNI();
-        bankingService.mostrarSaldoTransacciones(dni);
+        System.out.print(bankingService.mostrarSaldoTransacciones(dni));
     }
 
     private int obtenerDNI() {

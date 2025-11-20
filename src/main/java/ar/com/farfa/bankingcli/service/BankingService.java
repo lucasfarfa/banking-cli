@@ -15,7 +15,7 @@ public class BankingService
     {
         // TODO
         //this.repositorio = new FileCuentaRepository();
-        //cuentas = repositorio.cargarCuentasDesdeArchivo();
+        cuentas = new LinkedHashMap<>();
     }
 
     public boolean existeDNI(int dni) {
