@@ -13,19 +13,18 @@ public class BankingService
 
     public BankingService()
     {
-        // TODO
-        //this.repositorio = new FileCuentaRepository();
-        cuentas = new LinkedHashMap<>();
+
+        this.repositorio = new FileCuentaRepository();
+        this.cuentas = repositorio.cargarCuentasDesdeArchivo(); // carga el map al iniciar
     }
 
     public boolean existeDNI(int dni) {
         return cuentas.containsKey(dni);
-        // TODO: agregar excepciones
     }
 
-    // TODO
     public void guardarCuentasEnArchivo()
     {
+        repositorio.guardarCuentasEnArchivo(cuentas);
     }
 
     public void crearCuenta(int dni, String nombre, int pin)
@@ -50,11 +49,23 @@ public class BankingService
 
     public void transferirEntreCuentas(int dniOrigen, int dniDestino, BigDecimal monto)
     {
+        if (dniOrigen == dniDestino) {
+            throw new IllegalArgumentException("No se puede transferir a la misma cuenta");
+        }
+
         Cuenta cuentaOrigen = cuentas.get(dniOrigen);
         Cuenta cuentaDestino = cuentas.get(dniDestino);
 
-        cuentaOrigen.enviarTransferencia(monto,dniDestino);
-        cuentaDestino.recibirTransferencia(monto,dniOrigen);
+        if (cuentaOrigen == null || cuentaDestino == null) {
+            throw new IllegalArgumentException("Cuenta no encontrada");
+        }
+
+        if (!cuentaOrigen.validarSaldo(monto)) {
+            throw new IllegalArgumentException("Saldo insuficiente");
+        }
+
+        cuentaOrigen.enviarTransferencia(monto, dniDestino);
+        cuentaDestino.recibirTransferencia(monto, dniOrigen);
     }
 
     public String mostrarSaldoTransacciones (int dni)

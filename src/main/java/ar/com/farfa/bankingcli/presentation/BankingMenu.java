@@ -96,16 +96,23 @@ public class BankingMenu
 
     private void trasnferirEntreCuentas() {
         int dniOrigen = obtenerDNI();
-        int dniDestino = obtenerDNI();
-        BigDecimal monto = ui.pedirMonto("Ingrese monto: ");
+        int dniDestino;
+        do {
+            dniDestino = ui.askForDNI("Ingrese DNI destino: ");
+            if (dniDestino == dniOrigen) {
+                ui.showErrorMessage("No puedes transferir a la misma cuenta");
+            } else if (!bankingService.existeDNI(dniDestino)) {
+                ui.showErrorMessage("El DNI destino no existe");
+            }
+        } while (dniDestino == dniOrigen || !bankingService.existeDNI(dniDestino));
 
-        if(!bankingService.validarSaldo(dniOrigen, monto))
-        {
-            ui.showErrorMessage("Saldo insuficiente en cuenta Origen");
-        }
-        else {
+        BigDecimal monto = ui.pedirMonto("Ingrese monto a transferir: ");
+
+        try {
             bankingService.transferirEntreCuentas(dniOrigen, dniDestino, monto);
-            ui.showSuccessMessage("Deposito de $" + monto + " realizado.");
+            ui.showSuccessMessage("Transferencia de $" + monto + " realizada con éxito");
+        } catch (IllegalArgumentException e) {
+            ui.showErrorMessage(e.getMessage());
         }
     }
 
