@@ -88,7 +88,7 @@ public class BankingMenu
         }
         else {
             bankingService.retirar(dni, monto);
-            ui.showSuccessMessage("Deposito de $" + monto + " realizado.");
+            ui.showSuccessMessage("Retiro de $" + monto + " realizado.");
         }
 
 
