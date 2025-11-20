@@ -91,7 +91,7 @@ public class FileCuentaRepository {
             }
             System.out.println("Guardadas " + cuentas.size() + " cuentas en cuentas.txt");
         } catch (IOException e) {
-            System.err.println("ERROR al guardar: " + e.getMessage());
+            System.err.println("ERROR! al guardar: " + e.getMessage());
         }
     }
 

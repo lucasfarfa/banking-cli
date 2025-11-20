@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a9f2a235-58a9-4f75-9352-db79b6d316b1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuentas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cuentas.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/persistence/FileCuentaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/persistence/FileCuentaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/BankingMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/BankingMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/service/BankingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/service/BankingService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +79,8 @@
       <workItem from="1763645627298" duration="3388000" />
       <workItem from="1763649364341" duration="925000" />
       <workItem from="1763651590083" duration="1136000" />
+      <workItem from="1763652758791" duration="159000" />
+      <workItem from="1763652970056" duration="46000" />
     </task>
     <servers />
   </component>
