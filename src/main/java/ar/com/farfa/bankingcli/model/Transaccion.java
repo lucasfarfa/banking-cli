@@ -8,7 +8,7 @@ public record Transaccion (
     TipoTransaccion tipo, // solo puedo instanciar los que están en el enum
     BigDecimal monto,
     LocalDateTime fecha,
-    String dniDestino
+    Integer dni
 ) {
     public enum TipoTransaccion {
         DEPOSITO,
@@ -16,5 +16,11 @@ public record Transaccion (
         TRANSFERENCIA_ENVIADA,
         TRANSFERENCIA_RECIBIDA
     } // el enum es muy util para definir Dias, Monedas, Estados, Roles, etc
+
+    @Override
+    public String toString() {
+        return fecha + " -> " + tipo + " \t " + monto + " \n";
+    }
+
 }
 

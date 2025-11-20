@@ -51,7 +51,7 @@ public class BankingMenu
     }
 
     // Estos metodos piden datos al usuario e interactuan con bankingservice para realizar las acciones del menu
-    // la logica de negocio sigue en servicio
+    // la logica de negocio se realiza en servicio
 
     private void crearCuenta() {
         int dni;
@@ -81,6 +81,7 @@ public class BankingMenu
         int dni = obtenerDNI();
         BigDecimal monto = ui.pedirMonto("Ingrese monto: ");
 
+        // monto debe ser <= a saldo para validar
         if(!bankingService.validarSaldo(dni, monto))
         {
             ui.showErrorMessage("Saldo insuficiente");
@@ -110,7 +111,7 @@ public class BankingMenu
 
     private void verSaldo() {
         int dni = obtenerDNI();
-        bankingService.mostrarSaldoTransacciones(dni);
+        System.out.print(bankingService.mostrarSaldoTransacciones(dni));
     }
 
     private int obtenerDNI() {
@@ -124,6 +125,5 @@ public class BankingMenu
         } while (!bankingService.existeDNI(dni));
         return dni;
     }
-
 
 }
