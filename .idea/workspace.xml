@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a9f2a235-58a9-4f75-9352-db79b6d316b1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/ConsoleUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/model/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/model/Cuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/model/Transaccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/model/Transaccion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/BankingMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/presentation/BankingMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/service/BankingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/com/farfa/bankingcli/service/BankingService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +19,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -35,6 +42,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "seguimos",
+    "java.suggest.annotation.dependency": "false",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -70,7 +78,9 @@
       <workItem from="1763426845417" duration="1302000" />
       <workItem from="1763501354582" duration="5787000" />
       <workItem from="1763582184955" duration="3585000" />
-      <workItem from="1763585913537" duration="82000" />
+      <workItem from="1763585913537" duration="705000" />
+      <workItem from="1763596439925" duration="979000" />
+      <workItem from="1763645627298" duration="3364000" />
     </task>
     <servers />
   </component>
